@@ -1,0 +1,33 @@
+<section class="registro">
+    <h2>Registros</h2>
+    @if(!store.isLoading()) {
+    <table mat-table [dataSource]="store.people()">
+        <ng-container matColumnDef="companyname">
+            <th mat-header-cell *matHeaderCellDef> Company Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.companyname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="contactname">
+            <th mat-header-cell *matHeaderCellDef> Contact Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.contactname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+            <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    }
+
+    <button mat-flat-button (click)="goBack()">Regresar</button>
+
+
+</section>

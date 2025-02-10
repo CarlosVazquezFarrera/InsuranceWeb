@@ -1,0 +1,39 @@
+<section class="registro">
+    <h2>Registro persona</h2>
+    <form [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Nombre de la compañía</mat-label>
+            <input matInput type="text" formControlName="companyName">
+            <mat-icon matSuffix>apartment</mat-icon>
+            @if (companyName.touched && companyName.invalid) {
+                <mat-error>{{companyNameError()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field> 
+            <mat-label>Nombre de la persona para contacto</mat-label>
+            <input matInput type="text" formControlName="contactName">
+            <mat-icon matSuffix>contacts</mat-icon>
+            @if (contactName.touched && contactName.invalid) {
+                <mat-error>{{contactNameError()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="text" formControlName="email">
+            <mat-icon matSuffix>mail</mat-icon>
+            @if (email.touched && email.invalid) {
+                <mat-error>{{emailError()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field> 
+            <mat-label>Teléfono</mat-label>
+            <input matInput type="tel" formControlName="phone">
+            <mat-icon matSuffix>phone_iphone</mat-icon>
+            @if (phone.touched && phone.invalid) {
+                <mat-error>{{phoneError()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-checkbox [formControl]="accepted">He leído y acepto el <span class="aviso"> Aviso de Privacidad/Términos y condiciones</span></mat-checkbox>
+    </form>
+    <button [disabled]="(form.invalid || !accepted.value) || store.isLoading()"  mat-flat-button (click)="save()">Guardar</button>
+</section>

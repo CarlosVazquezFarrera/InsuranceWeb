@@ -1,0 +1,23 @@
+{
+    "errors": {
+      "companyName": {
+        "required": "El nombre es requerido",
+        "minlength": "Debe escribir al menos 2 caracteres"
+      },
+      "contactName": {
+        "required": "La contacto es requerido",
+        "minlength": "Debe escribir al menos 2 caracteres"
+      },
+      "email": {
+        "required": "El mail es requerido",
+        "minlength": "Debe escribir al menos 2 caracteres",
+        "email": "Ingrese un correo válido"
+      },
+      "phone": {
+        "required": "La teléfono es requerida",
+        "minlength": "Debe escribir al menos 10 caracteres",
+        "onlyNumbers": "El número debe ser numérico"
+      }
+    }
+  }
+  

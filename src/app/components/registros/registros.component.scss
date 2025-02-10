@@ -1,0 +1,26 @@
+@use 'variables' as v;
+@use 'media-queries' as mq;
+@use 'utils' as u;
+
+section {
+    width: 95dvw;
+    padding: 0 1%;
+    @include u.flex-colum();
+
+    @include mq.lg() {
+        width: 50dvw;
+    }
+
+    h2 {
+        text-align: center;
+        color: v.$primary-blue;
+
+        @include mq.lg() {
+            text-align: start;
+        }
+    }
+
+    table {
+        height: 60px;
+    }
+}

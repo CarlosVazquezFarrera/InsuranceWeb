@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Información registrada</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Nombre de la compañía</h3>
+  <p>{{store.lasPersonAdded().companyname}}</p>
+  <h3>Nombre del contacto</h3>
+  <p>{{store.lasPersonAdded().contactname}}</p>
+  <h3>Correo</h3>
+  <p>{{store.lasPersonAdded().email}}</p>
+
+  <h3>Teléfono</h3>
+  <p>{{store.lasPersonAdded().phone}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="goToTable()">Aceptar</button>
+</mat-dialog-actions>

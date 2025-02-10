@@ -1,0 +1,12 @@
+@use 'media-queries' as mq;
+main {
+    width: 100%;
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    @include mq.lg() {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 3%;
+    }
+}

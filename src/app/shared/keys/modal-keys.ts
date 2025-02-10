@@ -1,0 +1,1 @@
+export type ModalsKeys = 'person_info';
